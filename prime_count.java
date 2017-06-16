@@ -1,4 +1,4 @@
-public class count_prime{
+public class prime_count{
 	public static void main(String[] args){
 		int b, cout=0;
 		for(int i = 101; i<=200; i += 1){
