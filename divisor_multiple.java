@@ -1,6 +1,12 @@
+
+import java.util.Scanner;
+
 public class divisor_multiple{
 	public static void main(String[] args){
-		int m = 17*5, n = 17*6, out1, out2;
+		int m, n, out1, out2;
+		Scanner s = new Scanner(System.in);
+		m = s.nextInt();
+		n = s.nextInt();
 		//Minimal Covenant
 		int min = m>n ? n : m;
 		for(int i = 2; i <= min; i++){
