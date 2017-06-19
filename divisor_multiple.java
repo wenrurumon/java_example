@@ -1,36 +1,52 @@
 
 import java.util.Scanner;
 
-public class divisor_multiple{
-	public static void main(String[] args){
-		int m, n, out1, out2;
-		Scanner s = new Scanner(System.in);
-		System.out.println("Input m");
-		m = s.nextInt();
-		System.out.println("Input n");
-		n = s.nextInt();
-		//Minimal Covenant
-		int min = m>n ? n : m;
-		boolean b = true;
-		for(int i = 2; i <= min; i++){
-			if( m%i+n%i == 0){
-				System.out.println("Minimal Covenant");
-				System.out.println(i);
-				b = false;
-				break;
-			}
-		}
-		if(b){
-			System.out.println("No Minimal Covenant");
-		}
-		//Maximum public multiple
-		int max = m>n ? m : n;
-		for(int i = max; i <= m*n; i++){
-			if( i%m + i%n == 0){
-				System.out.println("Maximum public multiple");
-				System.out.println(i);
-				break;
-			}
-		}
+class min{
+	public int min(int x, int y){
+		int rlt = x>y ? y : x;
+		return rlt;
 	}
 }
+
+class max{
+	public int max(int x, int y){
+		int rlt = x>y ? x : y;
+		return rlt;
+	}
+}
+
+class div{
+	public int div(int x, int y){
+		int m1, m2, rlt=1;
+		max M1 = new max();
+		min M2 = new min();
+		m1 = M1.max(x,y);
+		m2 = M2.min(x,y);
+		for(int i = m2; i >= 2; i--){
+			if(m1%i + m2%i == 0){
+				//System.out.println(i);
+				rlt = i;
+				break;
+			}
+		}
+		return rlt;
+	}
+}
+
+
+public class divisor_multiple{
+	public static void main(String[] args){
+		int rlt1, rlt2, x, y;
+		Scanner s = new Scanner(System.in);
+		System.out.println("input x");
+		x = s.nextInt();
+		System.out.println("input y");
+		y = s.nextInt();
+		div A = new div();
+		rlt1 = A.div(x,y);
+		System.out.println("Divisor: " + rlt1);
+		rlt2 = x * y / rlt1;
+		System.out.println("Multipler: " + rlt2);
+	}
+}
+
