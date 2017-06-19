@@ -33,7 +33,6 @@ class div{
 	}
 }
 
-
 public class divisor_multiple{
 	public static void main(String[] args){
 		int rlt1, rlt2, x, y;
