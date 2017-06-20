@@ -2,11 +2,12 @@
 import java.util.Scanner;
 
 class date{
-	int year;
-	int month;
-	int day;
-	int date;
-	int[] daysinmonth = {31,28,31,30,31,30,31,31,30,31,30,31};
+	private int year;
+	private int month;
+	private int day;
+	private int date;
+	private int[] daysinmonth = {31,28,31,30,31,30,31,31,30,31,30,31};
+
 	public void init(int x){
 		year = x/10000;
 		month = x/100-year*100;
@@ -16,6 +17,7 @@ class date{
 		}
 		//System.out.println(year+" "+month+" "+day);		
 	}
+	
 	public int countday(){
 		int temp = 0;
 		for(int i = 1; i<month; i++){
