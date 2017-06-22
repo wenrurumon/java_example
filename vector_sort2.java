@@ -43,6 +43,9 @@ class Vector{
 	public Vector(int[] vec){
 		this.vec = vec;
 	}
+	public void Vector(int[] vec){
+		this.vec = vec;
+	}
 	public int[] value(){
 		return vec;
 	}
@@ -60,7 +63,7 @@ class Vector{
 	}
 }
 
-public class test{
+public class vector_sort2{
 	public static void main(String[] args){
 		int len;
 		Input input = new Input();
@@ -81,9 +84,26 @@ public class test{
 		for(int i = 0; i<len; i++){
 			v_sort[v_order[i]] = v_val[i];
 		}
-		printer.print(v_val);
-		printer.print(v_order);
+		//printer.print(v_val);
+		//printer.print(v_order);
 		printer.print(v_sort);
-		
+		//Vector Insert
+		input.input();
+		int[] vec2 = new int[len+1];
+		for(int i = 0; i<len; i++){
+			vec2[i] = v_sort[i];
+		}
+		vec2[len] = input.value();
+		Vector v2 = new Vector(vec2);
+		//Vector2 Sort
+		int[] v2_val = v2.value();
+		int[] v2_order = v2.rank();
+		int[] v2_sort = new int[len+1];
+		for(int i = 0; i<=len; i++){
+			v2_sort[v2_order[i]] = v2_val[i];
+		}
+		//printer.print(v2_val);
+		//printer.print(v2_order);
+		printer.print(v2_sort);
 	}
 }
