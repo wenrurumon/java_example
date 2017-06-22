@@ -42,7 +42,7 @@ class Printer{
 	}
 }
 
-public class reserve_print{
+public class reserve_print2{
 	public static void main(String[] args){
 		Input input = new Input();
 		Printer printer = new Printer();
