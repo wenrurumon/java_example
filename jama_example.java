@@ -3,28 +3,28 @@ import Jama.*;
 
 class Printer{
 	public void print(Matrix x){
-		x.print(5, 5);
+		x.print(5,2);
 	}
 	public void print(double x){
 		System.out.println(x);
 	}
+	public void printsvd(Matrix x_){
+		SingularValueDecomposition x = new SingularValueDecomposition(x_);
+		System.out.println("U");
+		x.getU().print(5,2);
+		System.out.println("V");
+		x.getV().print(5,2);
+		System.out.print("S");
+		x.getS().print(5,2);
+	}
 }
 
 public class jama_example{
-	public static void main(String[] args){
+	public static void main(String[] arg){
 		Printer p = new Printer();
-		double[][] x1 = {{1,2,3},{2.2,2.3,2.4},{3.1,3.5,4.2}};
-		Matrix x = new Matrix(x1);
-		p.print(x);
-		Matrix x2 = x.inverse();
-		p.print(x2);
-		Matrix x3 = x.times(x2);
-		p.print(x3);
-		
-		SingularValueDecomposition svd = new SingularValueDecomposition(x);
-		p.print(svd.getU());
-		p.print(svd.getS());
-		p.print(svd.getV());
-		p.print(svd.norm2());
+		double[][] x = {{1,2,3},{2,3,4},{3,5,5}};
+		Matrix x1 = new Matrix(x);
+		p.print(x1);
+		p.printsvd(x1);
 	}
 }
