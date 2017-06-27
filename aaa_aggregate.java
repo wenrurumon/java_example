@@ -1,5 +1,4 @@
 import java.util.Scanner;
-//输入数字x与重复次数y，计算形状x + xx + xxx ...的加和。如x=1,y=3 -> 计算1+11+111
 
 public class aaa_aggregate{
 	public static void main(String[] args){
