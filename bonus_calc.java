@@ -1,6 +1,9 @@
 
 import java.util.Scanner;
 
+//给定销售业绩x，当x小于10，得到百分之10的bonus。当x大于10小于20，超出部分得7.5%。[20-40]:5%，[40,60]:3%，[60-100]:1.5%，[100,+inf]:1%
+//设计程序给定某个业绩，输出其bonus
+
 public class bonus_calc{
 	public static void main(String[] args){
 		double x, rlt=0, temp;
