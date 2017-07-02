@@ -1,4 +1,6 @@
 
+//画一个菱形
+
 class printer{
 	public void printsp(int x){
 		for(int i = 0; i<x; i++){
