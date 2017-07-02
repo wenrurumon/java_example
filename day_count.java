@@ -1,6 +1,8 @@
 
 import java.util.Scanner;
 
+//给出一个八位日期，数这是该年的第几天
+
 class date{
 	private int year;
 	private int month;
