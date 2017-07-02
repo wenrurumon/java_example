@@ -1,4 +1,6 @@
 
+//给两个数字，求最大公约数及最小公倍数
+
 import java.util.Scanner;
 
 class min{
