@@ -1,4 +1,6 @@
 
+//九九乘法表
+
 class printer{
 	public void print(int x){
 		System.out.print(x + " ");
